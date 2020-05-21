@@ -1,13 +1,37 @@
+/* reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     background-image: url(https://image.freepik.com/free-photo/smooth-gradient-background_77528-21.jpg);
     background-size: auto 100vh;
     font-family: verdana;
     height: 100vh;
+    font-size: 13px;
   }
+
+/* breakpoint */
+@media (min-width: 400px) {
+  body {
+    font-size: 16px;
+  }
+}
   
-  
+header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   .menu {
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   
   .menu ul {
@@ -19,6 +43,11 @@ body {
     list-style: none;
   }
   
+  .menu a {  
+    display: block;
+    padding: 10px 20px
+  }
+
   a {
     color: teal;
     text-decoration: none;
@@ -37,3 +66,22 @@ body {
   .site-subtitle {
     font-style: italic;
   }
+
+  .img-portfolio {
+    height: 180px;
+    width: 180px;
+  }
+
+section {
+    text-align: center;
+  }
+
+@media (min-width: 870px) {
+  section div {
+    display: flex;
+    justify-content: center;
+  }   
+  figure {
+    padding: 18px;
+  }
+}
