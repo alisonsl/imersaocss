@@ -1,39 +1,152 @@
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url(https://image.freepik.com/free-photo/smooth-gradient-background_77528-21.jpg);
-    background-size: auto 100vh;
-    font-family: verdana;
-    height: 100vh;
+  background-image: url(https://image.freepik.com/free-photo/smooth-gradient-background_77528-21.jpg);
+  background-size: auto 100vh;
+  font-family: 'Nova Mono', monospace;
+  height: 100vh;
+  font-size: 13px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+  
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+  
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+  
+.menu li {
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
   }
   
+.menu a {  
+  display: block;
+  padding: 10px 20px
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
   
-  .menu {
-    background-color: white;
-  }
+a:hover {
+  text-decoration: underline;
+}
   
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
-  }
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-family: 'Satisfy', cursive;
+}
   
-  .menu li {
-    list-style: none;
-  }
+.site-subtitle {
+  font-style: italic;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2{
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+figure figcaption {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+}
+
+.portfolio div {
+  text-align: center;
+}  
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
   
-  a {
-    color: teal;
-    text-decoration: none;
+@media (min-width: 460px) {
+  .portfolio .grid {
+    grid-template-columns: 225px 225px;
   }
-  
-  a:hover {
-    text-decoration: underline;
+}
+
+@media (min-width: 580px) {
+  .portfolio .grid {
+    grid-template-columns: 180px 180px 180px;
   }
-  
-  .site-subtitle,
-  .site-title {
-    color: whitesmoke;
-    text-align: center;
+}
+
+@media (min-width: 700px) {
+  .portfolio .grid {
+    grid-template-columns: 225px 225px 225px;
   }
-  
-  .site-subtitle {
-    font-style: italic;
+}
+
+@media (min-width: 870px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
   }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left bottom;
+}
